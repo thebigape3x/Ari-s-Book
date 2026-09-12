@@ -1,0 +1,2937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Ari ❤️</title>
+
+<style>
+
+/* =========================================================
+   GENERAL
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+    background: #12000a;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================================
+   PAGE 1
+========================================================= */
+
+#homeScreen {
+    min-height: 100vh;
+    width: 100%;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 0, 70, 0.35), transparent 35%),
+        radial-gradient(circle at 80% 70%, rgba(0, 70, 255, 0.30), transparent 35%),
+        linear-gradient(135deg, #180008, #3b0015, #080d35);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.home-content {
+    position: relative;
+    z-index: 5;
+    padding: 30px;
+}
+
+.name {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-size: clamp(3rem, 9vw, 7rem);
+    font-style: italic;
+    font-weight: bold;
+
+    color: #fff;
+
+    text-shadow:
+        0 0 10px rgba(255, 0, 80, 0.8),
+        0 0 30px rgba(255, 0, 80, 0.7),
+        0 0 60px rgba(30, 80, 255, 0.5);
+
+    margin-bottom: 12px;
+}
+
+.nicknames {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-size: clamp(1.5rem, 4vw, 2.6rem);
+    color: #ff547d;
+    margin-bottom: 25px;
+    font-style: italic;
+}
+
+.last-name-joke {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    line-height: 1.8;
+    color: #ffffff;
+    max-width: 650px;
+    margin: 0 auto 15px;
+}
+
+.spanish {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-size: 1.6rem;
+    color: #5e9cff;
+    font-style: italic;
+    margin-bottom: 35px;
+}
+
+.open-button {
+    border: none;
+    padding: 17px 38px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(90deg, #ff174f, #ff3d81, #145cff);
+
+    color: white;
+
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px rgba(255, 23, 79, 0.7),
+        0 0 35px rgba(20, 92, 255, 0.4);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.open-button:hover {
+    transform: scale(1.08);
+
+    box-shadow:
+        0 0 25px rgba(255, 23, 79, 0.9),
+        0 0 50px rgba(20, 92, 255, 0.7);
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.heart {
+    position: absolute;
+
+    font-size: 24px;
+
+    opacity: 0.6;
+
+    animation: floatHeart linear infinite;
+
+    pointer-events: none;
+}
+
+.heart:nth-child(1) {
+    left: 10%;
+    animation-duration: 9s;
+    animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+    left: 25%;
+    animation-duration: 12s;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+    left: 45%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+    left: 65%;
+    animation-duration: 13s;
+    animation-delay: 1s;
+}
+
+.heart:nth-child(5) {
+    left: 82%;
+    animation-duration: 11s;
+    animation-delay: 3s;
+}
+
+@keyframes floatHeart {
+
+    0% {
+        bottom: -50px;
+        transform: translateX(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.7;
+    }
+
+    80% {
+        opacity: 0.7;
+    }
+
+    100% {
+        bottom: 110%;
+        transform: translateX(70px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================================
+   PAGE 2
+========================================================= */
+
+.book-screen {
+    min-height: 100vh;
+    width: 100%;
+
+    position: fixed;
+    inset: 0;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255, 0, 70, 0.25), transparent 30%),
+        radial-gradient(circle at 85% 75%, rgba(0, 70, 255, 0.25), transparent 35%),
+        linear-gradient(135deg, #08000b, #1c0015, #061033);
+
+    display: none;
+
+    overflow: hidden;
+}
+
+.map-dots {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        radial-gradient(rgba(255,255,255,0.15) 1px, transparent 1px);
+
+    background-size: 35px 35px;
+
+    opacity: 0.35;
+}
+
+.route-map {
+    position: absolute;
+
+    width: min(1250px, 96vw);
+    height: min(680px, 82vh);
+
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.route-svg {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+.route-base {
+    fill: none;
+
+    stroke: rgba(255,255,255,0.15);
+
+    stroke-width: 3;
+}
+
+.route-line {
+    fill: none;
+
+    stroke: url(#routeGradient);
+
+    stroke-width: 6;
+
+    stroke-linecap: round;
+
+    stroke-dasharray: 16 13;
+
+    filter:
+        drop-shadow(0 0 8px #ff174f)
+        drop-shadow(0 0 15px #145cff);
+
+    animation: routeMove 2s linear infinite;
+}
+
+@keyframes routeMove {
+    to {
+        stroke-dashoffset: -58;
+    }
+}
+
+
+/* =========================================================
+   MAP LOCATIONS
+========================================================= */
+
+.location {
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    z-index: 4;
+}
+
+.location.ari {
+    left: 4%;
+    top: 55%;
+}
+
+.location.manie {
+    right: 4%;
+    top: 55%;
+}
+
+.pin {
+    width: 27px;
+    height: 27px;
+
+    border-radius: 50% 50% 50% 0;
+
+    background: #ff174f;
+
+    transform: rotate(-45deg);
+
+    box-shadow:
+        0 0 12px #ff174f,
+        0 0 30px rgba(255, 23, 79, 0.8);
+
+    position: relative;
+
+    margin-bottom: 12px;
+}
+
+.pin::after {
+    content: "";
+
+    position: absolute;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    top: 9px;
+    left: 9px;
+}
+
+.location.manie .pin {
+    background: #145cff;
+
+    box-shadow:
+        0 0 12px #145cff,
+        0 0 30px rgba(20, 92, 255, 0.8);
+}
+
+.location-name {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+
+    font-size: clamp(1rem, 2vw, 1.4rem);
+
+    font-weight: bold;
+
+    text-align: center;
+
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.4);
+}
+
+.location-details {
+    font-family: Arial, sans-serif;
+
+    font-size: 0.85rem;
+
+    color: rgba(255,255,255,0.75);
+
+    margin-top: 4px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   DISTANCE
+========================================================= */
+
+.distance-card {
+    position: absolute;
+
+    left: 50%;
+    top: 17%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+
+    z-index: 5;
+}
+
+.distance-number {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+
+    font-size: clamp(3rem, 8vw, 6rem);
+
+    font-weight: bold;
+
+    color: white;
+
+    line-height: 1;
+
+    text-shadow:
+        0 0 15px #ff174f,
+        0 0 35px #ff174f,
+        0 0 60px #145cff;
+}
+
+.distance-label {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+
+    margin-top: 8px;
+
+    font-size: 1rem;
+
+    letter-spacing: 4px;
+
+    color: #ff6a91;
+}
+
+
+/* =========================================================
+   FOUND YOU
+========================================================= */
+
+.found-you {
+    position: absolute;
+
+    left: 50%;
+    top: 31%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+
+    font-size: clamp(1.4rem, 4vw, 2.7rem);
+
+    font-style: italic;
+
+    white-space: nowrap;
+
+    text-align: center;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px #ff174f,
+        0 0 25px #145cff;
+}
+
+
+/* =========================================================
+   PLANES
+========================================================= */
+
+.plane {
+    position: absolute;
+
+    z-index: 7;
+
+    font-size: 2rem;
+
+    filter:
+        drop-shadow(0 0 7px rgba(255,255,255,0.8))
+        drop-shadow(0 0 15px rgba(255,23,79,0.7));
+
+    pointer-events: none;
+}
+
+.plane-one {
+    offset-path: path("M70,420 C280,210 720,210 930,420");
+
+    animation:
+        planeForward 7s linear infinite;
+}
+
+.plane-two {
+    offset-path: path("M930,420 C720,210 280,210 70,420");
+
+    animation:
+        planeBackward 7s linear infinite;
+}
+
+@keyframes planeForward {
+
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+@keyframes planeBackward {
+
+    0% {
+        offset-distance: 0%;
+    }
+
+    100% {
+        offset-distance: 100%;
+    }
+}
+
+
+/* =========================================================
+   PAGE 2 NAVIGATION
+========================================================= */
+
+.book-navigation {
+    position: absolute;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    display: flex;
+
+    gap: 15px;
+
+    z-index: 20;
+}
+
+.nav-button {
+    border: 1px solid rgba(255,255,255,0.3);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,23,79,0.35),
+            rgba(20,92,255,0.35)
+        );
+
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+
+    backdrop-filter: blur(10px);
+}
+
+.nav-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(255,23,79,0.6),
+        0 0 25px rgba(20,92,255,0.5);
+}
+
+
+/* =========================================================
+   PAGE 3
+========================================================= */
+
+.page3 {
+    display: none;
+
+    min-height: 100vh;
+    width: 100%;
+
+    position: fixed;
+    inset: 0;
+
+    overflow-y: auto;
+
+    background:
+        radial-gradient(
+            circle at 10% 10%,
+            rgba(255, 0, 70, 0.38),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(0, 80, 255, 0.35),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(255, 50, 90, 0.30),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #120006,
+            #360015,
+            #061137
+        );
+
+    padding: 65px 20px 90px;
+
+    color: white;
+}
+
+
+/* =========================================================
+   PAGE 3 FANCY FONT
+========================================================= */
+
+.page3,
+.page3-title,
+.page3-subtitle,
+.question-text,
+.hidden-answer,
+.love-about-answer {
+    font-family:
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+}
+
+
+/* =========================================================
+   PAGE 3 CONTENT
+========================================================= */
+
+.page3-content {
+    width: min(720px, 100%);
+
+    margin: 0 auto;
+}
+
+.page3-title {
+    text-align: center;
+
+    font-size: clamp(2.7rem, 8vw, 5rem);
+
+    font-style: italic;
+
+    line-height: 1.1;
+
+    margin-bottom: 12px;
+
+    color: white;
+
+    text-shadow:
+        0 0 12px #ff174f,
+        0 0 30px rgba(255,23,79,0.8),
+        0 0 45px rgba(20,92,255,0.5);
+}
+
+.page3-subtitle {
+    text-align: center;
+
+    font-size: 1.2rem;
+
+    color: #8eb4ff;
+
+    margin-bottom: 45px;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+}
+
+
+/* =========================================================
+   QUESTION BOXES
+========================================================= */
+
+.love-question {
+    width: 100%;
+
+    position: relative;
+
+    margin-bottom: 25px;
+
+    padding: 23px 60px 23px 25px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 23, 79, 0.28),
+            rgba(20, 92, 255, 0.20)
+        );
+
+    border: 1px solid rgba(255,255,255,0.16);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.35),
+        inset 0 0 25px rgba(255,255,255,0.03);
+
+    backdrop-filter: blur(12px);
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.love-question:hover {
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 23, 79, 0.42),
+            rgba(20, 92, 255, 0.34)
+        );
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.45),
+        0 0 18px rgba(255,23,79,0.22),
+        0 0 22px rgba(20,92,255,0.18);
+}
+
+.love-question.open {
+    border-color: rgba(255,255,255,0.28);
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 23, 79, 0.40),
+            rgba(20, 92, 255, 0.28)
+        );
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.45),
+        0 0 20px rgba(255,23,79,0.30),
+        0 0 25px rgba(20,92,255,0.20);
+}
+
+
+/* =========================================================
+   QUESTION TEXT
+========================================================= */
+
+.question-text {
+    font-size: clamp(1.15rem, 3vw, 1.5rem);
+
+    font-weight: bold;
+
+    color: white;
+
+    line-height: 1.45;
+
+    letter-spacing: 0.2px;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.2);
+}
+
+.question-text::after {
+    content: "+";
+
+    position: absolute;
+
+    right: 25px;
+    top: 21px;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1.8rem;
+
+    font-weight: normal;
+
+    color: #ff6d91;
+
+    transition: transform 0.3s ease;
+}
+
+.love-question.open .question-text::after {
+    transform: rotate(45deg);
+
+    color: #78a7ff;
+}
+
+
+/* =========================================================
+   ANSWERS
+========================================================= */
+
+.hidden-answer {
+    max-height: 0;
+
+    overflow: hidden;
+
+    opacity: 0;
+
+    margin-top: 0;
+
+    color: rgba(255,255,255,0.94);
+
+    font-size: 1.08rem;
+
+    line-height: 1.8;
+
+    transition:
+        max-height 0.6s ease,
+        opacity 0.4s ease,
+        margin-top 0.4s ease;
+}
+
+.love-question.open .hidden-answer {
+    max-height: 600px;
+
+    opacity: 1;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   ANSWER DIVIDERS
+========================================================= */
+
+.hidden-answer br {
+    line-height: 2;
+}
+
+
+/* =========================================================
+   "WHAT DO I LOVE ABOUT YOU?" ANSWER
+========================================================= */
+
+.love-about-answer {
+    text-align: center;
+
+    font-size: 1.08rem;
+
+    line-height: 1.6;
+}
+
+.love-intro {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-style: italic;
+}
+
+.love-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+
+    margin: 15px 0 20px;
+}
+
+.love-list div {
+    color: #ffffff;
+
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    text-shadow:
+        0 0 7px rgba(255,23,79,0.35);
+}
+
+.love-list div:nth-child(odd) {
+    color: #ff6f91;
+}
+
+.love-list div:nth-child(even) {
+    color: #82aaff;
+}
+
+.love-closing {
+    margin-top: 18px;
+
+    padding-top: 16px;
+
+    border-top: 1px solid rgba(255,255,255,0.18);
+
+    color: white;
+
+    font-style: italic;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   LAST QUESTION EMPHASIS
+========================================================= */
+
+.love-question:last-child {
+    margin-bottom: 0;
+}
+
+.love-question:last-child .question-text {
+    color: #fff;
+}
+
+.love-question:last-child .hidden-answer {
+    color: #ffd6df;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   BACK BUTTON PAGE 3
+========================================================= */
+
+.page3-back {
+    display: block;
+
+    margin: 35px auto 0;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(255,23,79,0.35),
+            rgba(20,92,255,0.35)
+        );
+
+    color: white;
+
+    font-family:
+        "Palatino Linotype",
+        "Book Antiqua",
+        Palatino,
+        Georgia,
+        serif;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.page3-back:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 15px rgba(255,23,79,0.5),
+        0 0 20px rgba(20,92,255,0.5);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .name {
+        font-size: 3.3rem;
+    }
+
+    .nicknames {
+        font-size: 1.5rem;
+    }
+
+    .last-name-joke {
+        font-size: 1rem;
+    }
+
+    .spanish {
+        font-size: 1.3rem;
+    }
+
+    .route-map {
+        width: 100%;
+        height: 65vh;
+    }
+
+    .location.ari {
+        left: 1%;
+    }
+
+    .location.manie {
+        right: 1%;
+    }
+
+    .location-name {
+        font-size: 0.9rem;
+    }
+
+    .location-details {
+        font-size: 0.7rem;
+    }
+
+    .distance-card {
+        top: 15%;
+    }
+
+    .found-you {
+        top: 28%;
+        font-size: 1.35rem;
+    }
+
+    .page3 {
+        padding:
+            45px
+            15px
+            70px;
+    }
+
+    .page3-title {
+        font-size: 2.8rem;
+    }
+
+    .page3-subtitle {
+        margin-bottom: 35px;
+    }
+
+    .love-question {
+        padding: 21px 55px 21px 20px;
+
+        margin-bottom: 22px;
+
+        border-radius: 18px;
+    }
+
+    .question-text {
+        font-size: 1.08rem;
+    }
+
+    .hidden-answer {
+        font-size: 1rem;
+
+        line-height: 1.7;
+    }
+
+    .love-about-answer {
+        font-size: 1rem;
+    }
+
+    .book-navigation {
+        bottom: 15px;
+    }
+
+    .nav-button {
+        padding: 10px 18px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     PAGE 1
+========================================================= -->
+
+<section id="homeScreen">
+
+    <div class="heart">❤️</div>
+    <div class="heart">💙</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💙</div>
+    <div class="heart">❤️</div>
+
+    <div class="home-content">
+
+        <div class="name">
+            Arelie Aguirre
+        </div>
+
+        <div class="nicknames">
+            Mi Amorrrrrrrrr
+        </div>
+
+        <div class="last-name-joke">
+            I may have forgot how to spell your last name
+            <br>
+            Well guess what...
+            <br>
+            I won't ever forget you. ❤️
+        </div>
+
+        <div class="spanish">
+            Mi reina
+        </div>
+
+        <button class="open-button" onclick="openBook()">
+            Ari's book →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PAGE 2
+========================================================= -->
+
+<section id="bookScreen" class="book-screen">
+
+    <div class="map-dots"></div>
+
+    <div class="distance-card">
+
+        <div class="distance-number">
+            2,893
+        </div>
+
+        <div class="distance-label">
+            MILES APART
+        </div>
+
+    </div>
+
+
+    <div class="found-you">
+        Yet I still found you
+    </div>
+
+
+    <div class="route-map">
+
+        <svg
+            class="route-svg"
+            viewBox="0 0 1000 600"
+            preserveAspectRatio="none"
+        >
+
+            <defs>
+
+                <linearGradient
+                    id="routeGradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="0%"
+                >
+
+                    <stop
+                        offset="0%"
+                        stop-color="#ff174f"
+                    />
+
+                    <stop
+                        offset="50%"
+                        stop-color="#ffffff"
+                    />
+
+                    <stop
+                        offset="100%"
+                        stop-color="#145cff"
+                    />
+
+                </linearGradient>
+
+            </defs>
+
+
+            <path
+                class="route-base"
+                d="M70,420 C280,210 720,210 930,420"
+            />
+
+            <path
+                class="route-line"
+                d="M70,420 C280,210 720,210 930,420"
+            />
+
+        </svg>
+
+
+        <!-- ARI -->
+
+        <div class="location ari">
+
+            <div class="pin"></div>
+
+            <div class="location-name">
+                Ari
+            </div>
+
+            <div class="location-details">
+                Riverview, Florida
+                <br>
+                United States
+            </div>
+
+        </div>
+
+
+        <!-- MANIE -->
+
+        <div class="location manie">
+
+            <div class="pin"></div>
+
+            <div class="location-name">
+                Manie
+            </div>
+
+            <div class="location-details">
+                Trinidad & Tobago
+                <br>
+                Caribbean
+            </div>
+
+        </div>
+
+
+        <!-- PLANES -->
+
+        <div class="plane plane-one">
+            ✈️
+        </div>
+
+        <div class="plane plane-two">
+            ✈️
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <div class="book-navigation">
+
+        <button
+            class="nav-button"
+            onclick="goBack()"
+        >
+            ← Back
+        </button>
+
+        <button
+            class="nav-button"
+            onclick="openPage3()"
+        >
+            Next →
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PAGE 3
+========================================================= -->
+
+<section id="page3" class="page3">
+
+    <div class="page3-content">
+
+        <h1 class="page3-title">
+            How much I love you.
+        </h1>
+
+        <div class="page3-subtitle">
+            Interact with them.
+        </div>
+
+
+        <!-- QUESTION 1 -->
+
+        <div
+            class="love-question"
+            onclick="revealAnswer(this)"
+        >
+
+            <div class="question-text">
+                Why do I love you?
+            </div>
+
+            <div class="hidden-answer">
+
+                Because you're worth every mile.
+
+                <br>
+
+                But when I see you, those clothes are coming off immediately.
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div
+            class="love-question"
+            onclick="revealAnswer(this)"
+        >
+
+            <div class="question-text">
+                How did we end up here?
+            </div>
+
+            <div class="hidden-answer">
+
+                We met in the strangest way
+
+                <br>
+
+                and you thought we'd just remain friends.
+
+                <br>
+
+                Guess what? I wanted otherwise with us & it worked.
+
+                <br>
+
+                We still here & not going anywhere anytime soon!
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div
+            class="love-question"
+            onclick="revealAnswer(this)"
+        >
+
+            <div class="question-text">
+                Would I choose you again?
+            </div>
+
+            <div class="hidden-answer">
+
+                1 million times over.
+
+                <br>
+
+                No hesitation.
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 4 -->
+
+        <div
+            class="love-question"
+            onclick="revealAnswer(this)"
+        >
+
+            <div class="question-text">
+                What do I love about you?
+            </div>
+
+            <div class="hidden-answer love-about-answer">
+
+                <div class="love-intro">
+                    Words can't even describe
+                </div>
+
+
+                <div class="love-list">
+
+                    <div>Your smile</div>
+
+                    <div>Your voice</div>
+
+                    <div>Your face</div>
+
+                    <div>Your laugh</div>
+
+                    <div>Your eyes</div>
+
+                    <div>Your attitude</div>
+
+                    <div>Your bossiness</div>
+
+                </div>
+
+
+                <div class="love-closing">
+
+                    So even from 2893 miles away,
+
+                    <br>
+
+                    you still manage to make me love you.
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 5 -->
+
+        <div
+            class="love-question"
+            onclick="revealAnswer(this)"
+        >
+
+            <div class="question-text">
+                What about those 2,893 miles?
+            </div>
+
+            <div class="hidden-answer">
+
+                They don't mean a thing.
+
+                <br>
+
+                If anything, they just show me
+
+                <br>
+
+                how much you're worth.
+
+            </div>
+
+        </div>
+
+
+        <!-- QUESTION 6 -->
+
+        <div
+            class="love-question"
+            onclick="revealAnswer(this)"
+        >
+
+            <div class="question-text">
+                Am I actually coming to see you?
+            </div>
+
+            <div class="hidden-answer">
+
+                Yes.
+
+                <br>
+
+                That's not just something I say.
+
+                <br>
+
+                I'm making it my #1 priority.❤️
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="page3-back"
+            onclick="backToPage2()"
+        >
+            ← Back to the distance
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<script>
+
+/* =========================================================
+   PAGE NAVIGATION
+========================================================= */
+
+function openBook() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "block";
+
+    document.getElementById("page3").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+
+
+function goBack() {
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("homeScreen").style.display = "flex";
+
+    window.scrollTo(0, 0);
+}
+
+
+function openPage3() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+function backToPage2() {
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================================================
+   QUESTION REVEAL
+========================================================= */
+
+function revealAnswer(question) {
+
+    question.classList.toggle("open");
+
+}
+
+</script>
+
+</body>
+</html><!-- =========================
+     PAGE 4
+========================= -->
+
+<section id="page4">
+
+    <div class="story-container">
+
+
+        <!-- STORY HEADER -->
+
+        <div class="story-header">
+
+            <h1>
+                OUR STORY!
+            </h1>
+
+            <div class="story-subtitle">
+                Unexpected Reality
+            </div>
+
+            <div class="story-date">
+                July 4th, 2026
+            </div>
+
+        </div>
+
+
+
+        <!-- TIMELINE -->
+
+        <div class="timeline">
+
+
+            <!-- =====================
+                 MOMENT 1
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    July 4th, 2026
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        The Worst Video Game Ever Created 😭
+                    </h2>
+
+                    <p>
+
+                        On the worst video game ever created,
+                        there could've been a million other ways
+                        for us to meet.
+
+                        <br><br>
+
+                        A million different ways,
+                        a million different moments...
+
+                        <br><br>
+
+                        But God had His own plans for us. ❤️
+
+                    </p>
+
+                    <span class="story-tag">
+                        Somehow, this was the plan.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 2
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    In the beginning
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        "We're Just Friends." 👀
+                    </h2>
+
+                    <p>
+
+                        It started off with us just talking,
+                        days apart, just as friends.
+
+                        <br><br>
+
+                        I'd ask you to play and then I'd say,
+
+                        <br>
+
+                        <span class="highlight">
+                            "I don't wanna intrude."
+                        </span>
+
+                        <br><br>
+
+                        But the truth is...
+
+                        <br>
+
+                        I was really nervous to even talk to you
+                        while playing.
+
+                        <br><br>
+
+                        I didn't know if you'd even talk back to me.
+
+                    </p>
+
+                    <span class="story-tag">
+                        Plot twist: you did. 😂
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 3
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    Then I realized...
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        You Changed My Mind Instantly
+                    </h2>
+
+                    <p>
+
+                        I was so wrong about that.
+
+                        <br><br>
+
+                        The energy & joy you had just playing
+                        the game changed my mind instantly.
+
+                        <br><br>
+
+                        And ever since, the thought of
+
+                        <br>
+
+                        <span class="highlight">
+                            "Should I talk to her a little more?"
+                        </span>
+
+                        <br><br>
+
+                        turned into...
+
+                        <br><br>
+
+                        <span class="blue-highlight">
+                            every second,
+                            every minute,
+                            every hour,
+                            every day.
+                        </span>
+
+                    </p>
+
+                    <span class="story-tag">
+                        Yeah... "a little more" didn't work. 😭
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 4
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    Somewhere along the way
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        Then It Became Us ❤️
+                    </h2>
+
+                    <p>
+
+                        The movies.
+
+                        <br>
+
+                        The games.
+
+                        <br>
+
+                        The late-night talks.
+
+                        <br>
+
+                        The laughs.
+
+                        <br>
+
+                        Me being stupid always. 😭
+
+                        <br><br>
+
+                        The rage-baiting each other still brings me
+                        so much joy.
+
+                        <br><br>
+
+                        And I'm pretty sure I know it does for you
+                        as well.
+
+                    </p>
+
+                    <span class="story-tag">
+                        We really do annoy each other for fun.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 5
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    The part that matters
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        I Meant Every Word
+                    </h2>
+
+                    <p>
+
+                        I know it's hard for us to express feelings.
+
+                        <br><br>
+
+                        But everything I've said was real.
+
+                        <br>
+
+                        Everything I've told you was the truth.
+
+                        <br><br>
+
+                        And it will never stop being true.
+
+                        <br><br>
+
+                        I believe in us.
+
+                        <br><br>
+
+                        That's one of the many reasons
+                        I'm still here.
+
+                    </p>
+
+                    <span class="story-tag">
+                        No expiration date on this one. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 6
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    2,893 miles later
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        I'm Counting Down The Days ✈️
+                    </h2>
+
+                    <p>
+
+                        I believe in us,
+
+                        <br>
+
+                        and I'm counting down the days
+                        until I can finally come see you.
+
+                        <br><br>
+
+                        Those 2,893 miles?
+
+                        <br>
+
+                        They're not stopping me.
+
+                        <br><br>
+
+                        If anything,
+                        they're just making me want that moment
+                        even more.
+
+                    </p>
+
+                    <span class="story-tag">
+                        Florida, I'm coming. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 7
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    That first month
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        You Brought Me So Much Joy
+                    </h2>
+
+                    <p>
+
+                        I always tell you that you brought
+                        so much joy to my life within that
+                        one month.
+
+                        <br><br>
+
+                        And I hope it can last forever.
+
+                        <br><br>
+
+                        Because honestly...
+
+                        <br>
+
+                        I don't want this to be
+                        just a chapter that ends.
+
+                    </p>
+
+                    <span class="story-tag">
+                        I'd like the whole book, please. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 8
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    The part we had to overcome
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        We Had Our Falling Out
+                    </h2>
+
+                    <p>
+
+                        Yeah...
+
+                        <br>
+
+                        We had a falling out.
+
+                        <br><br>
+
+                        But I thank you for forgiving me.
+
+                        <br><br>
+
+                        I don't take that forgiveness for granted.
+
+                        <br><br>
+
+                        And I promise you,
+
+                        <br>
+
+                        <span class="highlight">
+                            I won't make that mistake again.
+                        </span>
+
+                    </p>
+
+                    <span class="story-tag">
+                        Lesson learned. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================
+             STORY ENDING
+        ====================== -->
+
+        <div class="story-ending">
+
+            <div class="story-ending-heart">
+                ❤️
+            </div>
+
+            <h2>
+                And that's our story so far.
+            </h2>
+
+            <p>
+
+                Not perfect.
+
+                Not planned.
+
+                Definitely not normal.
+
+                <br><br>
+
+                But ours.
+
+                <br><br>
+
+                And I wouldn't change how we found each other
+                for anything.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="distance-buttons">
+
+            <button class="page-button" onclick="backToPage3()">
+                ← Back
+            </button>
+
+            <button class="page-button" onclick="goBack()">
+                Start Over ❤️
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   OPEN PAGE 2
+========================= */
+
+function openBook() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "block";
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   GO BACK HOME
+========================= */
+
+function goBack() {
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "none";
+
+    document.getElementById("homeScreen").style.display = "flex";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   OPEN PAGE 3
+========================= */
+
+function openPage3() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "block";
+
+    document.getElementById("page4").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   BACK TO PAGE 2
+========================= */
+
+function backToPage2() {
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   REVEAL PAGE 3 ANSWERS
+========================= */
+
+function revealAnswer(question) {
+
+    question.classList.toggle("open");
+
+}
+
+
+/* =========================
+   OPEN PAGE 4
+========================= */
+
+function openPage4() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   BACK TO PAGE 3
+========================= */
+
+function backToPage3() {
+
+    document.getElementById("page4").style.display = "none";
+
+    document.getElementById("page3").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+</script>
+
+<!-- =========================
+     PAGE 4
+========================= -->
+
+<section id="page4">
+
+    <div class="story-container">
+
+
+        <!-- STORY HEADER -->
+
+        <div class="story-header">
+
+            <h1>
+                OUR STORY!
+            </h1>
+
+            <div class="story-subtitle">
+                Unexpected Reality
+            </div>
+
+            <div class="story-date">
+                July 4th, 2026
+            </div>
+
+        </div>
+
+
+
+        <!-- TIMELINE -->
+
+        <div class="timeline">
+
+
+            <!-- =====================
+                 MOMENT 1
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    July 4th, 2026
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        The Worst Video Game Ever Created 😭
+                    </h2>
+
+                    <p>
+
+                        On the worst video game ever created,
+                        there could've been a million other ways
+                        for us to meet.
+
+                        <br><br>
+
+                        A million different ways,
+                        a million different moments...
+
+                        <br><br>
+
+                        But God had His own plans for us. ❤️
+
+                    </p>
+
+                    <span class="story-tag">
+                        Somehow, this was the plan.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 2
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    In the beginning
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        "We're Just Friends." 👀
+                    </h2>
+
+                    <p>
+
+                        It started off with us just talking,
+                        days apart, just as friends.
+
+                        <br><br>
+
+                        I'd ask you to play and then I'd say,
+
+                        <br>
+
+                        <span class="highlight">
+                            "I don't wanna intrude."
+                        </span>
+
+                        <br><br>
+
+                        But the truth is...
+
+                        <br>
+
+                        I was really nervous to even talk to you
+                        while playing.
+
+                        <br><br>
+
+                        I didn't know if you'd even talk back to me.
+
+                    </p>
+
+                    <span class="story-tag">
+                        Plot twist: you did. 😂
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 3
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    Then I realized...
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        You Changed My Mind Instantly
+                    </h2>
+
+                    <p>
+
+                        I was so wrong about that.
+
+                        <br><br>
+
+                        The energy & joy you had just playing
+                        the game changed my mind instantly.
+
+                        <br><br>
+
+                        And ever since, the thought of
+
+                        <br>
+
+                        <span class="highlight">
+                            "Should I talk to her a little more?"
+                        </span>
+
+                        <br><br>
+
+                        turned into...
+
+                        <br><br>
+
+                        <span class="blue-highlight">
+                            every second,
+                            every minute,
+                            every hour,
+                            every day.
+                        </span>
+
+                    </p>
+
+                    <span class="story-tag">
+                        Yeah... "a little more" didn't work. 😭
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 4
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    Somewhere along the way
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        Then It Became Us ❤️
+                    </h2>
+
+                    <p>
+
+                        The movies.
+
+                        <br>
+
+                        The games.
+
+                        <br>
+
+                        The late-night talks.
+
+                        <br>
+
+                        The laughs.
+
+                        <br>
+
+                        Me being stupid always. 😭
+
+                        <br><br>
+
+                        The rage-baiting each other still brings me
+                        so much joy.
+
+                        <br><br>
+
+                        And I'm pretty sure I know it does for you
+                        as well.
+
+                    </p>
+
+                    <span class="story-tag">
+                        We really do annoy each other for fun.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 5
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    The part that matters
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        I Meant Every Word
+                    </h2>
+
+                    <p>
+
+                        I know it's hard for us to express feelings.
+
+                        <br><br>
+
+                        But everything I've said was real.
+
+                        <br>
+
+                        Everything I've told you was the truth.
+
+                        <br><br>
+
+                        And it will never stop being true.
+
+                        <br><br>
+
+                        I believe in us.
+
+                        <br><br>
+
+                        That's one of the many reasons
+                        I'm still here.
+
+                    </p>
+
+                    <span class="story-tag">
+                        No expiration date on this one. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 6
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    2,893 miles later
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        I'm Counting Down The Days ✈️
+                    </h2>
+
+                    <p>
+
+                        I believe in us,
+
+                        <br>
+
+                        and I'm counting down the days
+                        until I can finally come see you.
+
+                        <br><br>
+
+                        Those 2,893 miles?
+
+                        <br>
+
+                        They're not stopping me.
+
+                        <br><br>
+
+                        If anything,
+                        they're just making me want that moment
+                        even more.
+
+                    </p>
+
+                    <span class="story-tag">
+                        Florida, I'm coming. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 7
+            ====================== -->
+
+            <div class="timeline-item left">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    That first month
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        You Brought Me So Much Joy
+                    </h2>
+
+                    <p>
+
+                        I always tell you that you brought
+                        so much joy to my life within that
+                        one month.
+
+                        <br><br>
+
+                        And I hope it can last forever.
+
+                        <br><br>
+
+                        Because honestly...
+
+                        <br>
+
+                        I don't want this to be
+                        just a chapter that ends.
+
+                    </p>
+
+                    <span class="story-tag">
+                        I'd like the whole book, please. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =====================
+                 MOMENT 8
+            ====================== -->
+
+            <div class="timeline-item right">
+
+                <div class="timeline-dot"></div>
+
+                <div class="timeline-date">
+                    The part we had to overcome
+                </div>
+
+                <div class="story-card">
+
+                    <h2>
+                        We Had Our Falling Out
+                    </h2>
+
+                    <p>
+
+                        Yeah...
+
+                        <br>
+
+                        We had a falling out.
+
+                        <br><br>
+
+                        But I thank you for forgiving me.
+
+                        <br><br>
+
+                        I don't take that forgiveness for granted.
+
+                        <br><br>
+
+                        And I promise you,
+
+                        <br>
+
+                        <span class="highlight">
+                            I won't make that mistake again.
+                        </span>
+
+                    </p>
+
+                    <span class="story-tag">
+                        Lesson learned. ❤️
+                    </span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =====================
+             STORY ENDING
+        ====================== -->
+
+        <div class="story-ending">
+
+            <div class="story-ending-heart">
+                ❤️
+            </div>
+
+            <h2>
+                And that's our story so far.
+            </h2>
+
+            <p>
+
+                Not perfect.
+
+                Not planned.
+
+                Definitely not normal.
+
+                <br><br>
+
+                But ours.
+
+                <br><br>
+
+                And I wouldn't change how we found each other
+                for anything.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- BUTTONS -->
+
+        <div class="distance-buttons">
+
+            <button class="page-button" onclick="backToPage3()">
+                ← Back
+            </button>
+
+            <button class="page-button" onclick="goBack()">
+                Start Over ❤️
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
+<script>
+
+
+/* =========================
+   OPEN PAGE 2
+========================= */
+
+function openBook() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "block";
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   GO BACK HOME
+========================= */
+
+function goBack() {
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "none";
+
+    document.getElementById("homeScreen").style.display = "flex";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   OPEN PAGE 3
+========================= */
+
+function openPage3() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "block";
+
+    document.getElementById("page4").style.display = "none";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   BACK TO PAGE 2
+========================= */
+
+function backToPage2() {
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   REVEAL PAGE 3 ANSWERS
+========================= */
+
+function revealAnswer(question) {
+
+    question.classList.toggle("open");
+
+}
+
+
+/* =========================
+   OPEN PAGE 4
+========================= */
+
+function openPage4() {
+
+    document.getElementById("homeScreen").style.display = "none";
+
+    document.getElementById("bookScreen").style.display = "none";
+
+    document.getElementById("page3").style.display = "none";
+
+    document.getElementById("page4").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+/* =========================
+   BACK TO PAGE 3
+========================= */
+
+function backToPage3() {
+
+    document.getElementById("page4").style.display = "none";
+
+    document.getElementById("page3").style.display = "block";
+
+    window.scrollTo(0, 0);
+}
+
+
+</script>
+
+</body>
+</html><!-- =========================================================
+     PAGE 4
+========================================================= -->
+
+<section id="page4" class="page4">
+
+    <div class="page4-content">
+
+        <h1 class="page4-title">
+            OUR STORY!
+        </h1>
+
+        <div class="page4-subtitle">
+            Unexpected Reality
+        </div>
+
+        <div class="story-text">
+
+            <p>
+                July 4th, 2026 on the worst video game ever created, there could be a million other ways we meet but God had his own plans for us.
+            </p>
+
+            <p>
+                Started off as us just talking days apart just as friends, me asking you to play then I'd say "I don't wanna intrude" but the truth is, I was really nervous to even talk to you while playing I didn't know if you'd even talk back to me.
+            </p>
+
+            <p>
+                I was so wrong about that, the energy & joy you just had playing the game changed my mind instantly & ever since, the "Should I talk to her a little more?" A little more turned into every second, every minute, every hour & everyday.
+            </p>
+
+            <p>
+                The movies, games, late night talks, laughs, me being stupid always, the rage-baiting each other still brings me joy & I'm I know it does for you as well.
+            </p>
+
+            <p>
+                I know it's hard for us to express feelings but all what I said was real & the truth, it will never stop.
+            </p>
+
+            <p>
+                I believe in us 1 of the many reasons I'm still here & I'm counting down the days till I can finally come see you.
+            </p>
+
+            <p>
+                I always tell say that you bought so much joy to my life within that 1 month & I hope it can last forever.
+            </p>
+
+            <p>
+                Yeah we had a falling out, I thank you for forgiving me & I promise I won't make that mistake again.
+            </p>
+
+        </div>
+
+        <button class="story-reveal-button" onclick="revealLove()">
+            OUR STORY! ❤️
+        </button>
+
+        <div id="loveReveal" class="love-reveal">
+            I LOVE YOU
+        </div>
+
+        <button class="page4-back" onclick="backToPage3()">
+            ← Back to how much I love you
+        </button>
+
+    </div>
+
+</section>
